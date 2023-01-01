@@ -9,7 +9,9 @@ class ExampleController extends Controller
     //
     public function homepage()
     {
-        return '<h1>Hallow World</h1><a href="/about">View About Page</a>';
+        $myname = "AG";
+        $allAnimal = ['Meoaauuu', 'Caty', 'Catman'];
+        return view('homepage', ['name' => $myname, 'allAnimal' =>  $allAnimal, 'catname' => 'Simba']);
     }
 
     public function aboutpage()

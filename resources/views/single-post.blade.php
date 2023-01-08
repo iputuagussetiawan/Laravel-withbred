@@ -4,7 +4,7 @@
         <h2>{{ $post->title }}</h2>
         @can('update',$post)
         <span class="pt-2">
-          <a href="#" class=" mr-2 btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
+          <a href="/post/{{ $post->id }}/edit" class=" mr-2 btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit">Edit</a>
           <form class="delete-post-form d-inline" action="/post/{{$post->id}}" method="POST">
             @csrf
             @method('DELETE')

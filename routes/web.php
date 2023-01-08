@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -14,6 +15,13 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/admins-only', function () {
+    if (Gate::allows('visitAdminPages')) {
+        return 'Only admin should be able to see this page';
+    }
+    return 'You canot view this page';
+})->middleware('can:visitAdminPages');
 
 Route::get('/', [UserController::class, "showCorrectHomepage"])->name('login');
 Route::post('/register', [UserController::class, "register"])->middleware('guest');

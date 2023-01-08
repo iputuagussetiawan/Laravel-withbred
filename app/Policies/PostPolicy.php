@@ -54,7 +54,10 @@ class PostPolicy
     public function update(User $user, Post $post)
     {
         //
-        return $user->id===$post->user_id;
+        if ($user->isAdmin === 1) {
+            return true;
+        }
+        return $user->id === $post->user_id;
     }
 
     /**
@@ -67,7 +70,10 @@ class PostPolicy
     public function delete(User $user, Post $post)
     {
         //
-        return $user->id===$post->user_id;
+        if ($user->isAdmin === 1) {
+            return true;
+        }
+        return $user->id === $post->user_id;
     }
 
     /**

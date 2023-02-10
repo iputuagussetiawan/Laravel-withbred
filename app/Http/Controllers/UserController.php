@@ -54,7 +54,7 @@ class UserController extends Controller
     {
         $thePosts = $user->posts()->latest()->get();
         $thePostsCount = $user->posts()->count();
-        return view('profile-posts', ['username' => $user->username, 'posts' => $thePosts, 'postCount' => $thePostsCount]);
+        return view('profile-posts', ['avatar' => $user->avatar,  'username' => $user->username, 'posts' => $thePosts, 'postCount' => $thePostsCount]);
     }
 
     public function showAvatarForm()
@@ -67,12 +67,16 @@ class UserController extends Controller
         $request->validate([
             'avatar' => 'required|image|max:3000'
         ]);
-
         $user = auth()->user();
-
         $filename = $user->id . '-' . uniqid() . '.jpg';
-
         $imgData = Image::make($request->file('avatar'))->fit(120)->encode('jpg');
         Storage::put('public/avatars/' . $filename, $imgData);
+        $oldAvatar = $user->avatar;
+        $user->avatar = $filename;
+        $user->save();
+        if ($oldAvatar != "/fallback-avatar.jpg") {
+            Storage::delete(str_replace("/storage/", "public/", $oldAvatar));
+        }
+        return back()->with('success', 'Congrats on the new avatar.');
     }
 }

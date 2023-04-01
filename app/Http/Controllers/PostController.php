@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     //
+    public function index()
+    {
+        return view('posts', [
+            "title" => "News",
+            "title" => "All Posts",
+            // "posts" => Post::all()
+            "posts" => Post::with(['user','category'])->latest()->get()
+        ]);
+    }
+    
     function showCreateForm()
     {
         return view('create-post');

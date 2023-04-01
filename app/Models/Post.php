@@ -11,7 +11,8 @@ class Post extends Model
     use Searchable;
     use HasFactory;
 
-    protected $fillable = ['title', 'body', 'user_id'];
+    //protected $fillable = ['title','slug','body', 'user_id'];
+    protected $guarded = ['id'];
 
     public function toSearchableArray()
     {
@@ -24,5 +25,10 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

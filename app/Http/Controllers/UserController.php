@@ -17,23 +17,16 @@ class UserController extends Controller
         $request->validate([
             'avatar' => 'required|image|max:3000'
         ]);
-
         $user = auth()->user();
-
         $filename = $user->id . '-' . uniqid() . '.jpg';
-
         $imgData = Image::make($request->file('avatar'))->fit(120)->encode('jpg');
         Storage::put('public/avatars/' . $filename, $imgData);
-
         $oldAvatar = $user->avatar;
-
         $user->avatar = $filename;
         $user->save();
-
         if ($oldAvatar != "/fallback-avatar.jpg") {
             Storage::delete(str_replace("/storage/", "public/", $oldAvatar));
         }
-
         return back()->with('success', 'Congrats on the new avatar.');
     }
 
@@ -45,11 +38,9 @@ class UserController extends Controller
     private function getSharedData($user)
     {
         $currentlyFollowing = 0;
-
         if (auth()->check()) {
             $currentlyFollowing = Follow::where([['user_id', '=', auth()->user()->id], ['followeduser', '=', $user->id]])->count();
         }
-
         View::share('sharedData', ['currentlyFollowing' => $currentlyFollowing, 'avatar' => $user->avatar, 'username' => $user->username, 'postCount' => $user->posts()->count(), 'followerCount' => $user->followers()->count(), 'followingCount' => $user->followingTheseUsers()->count()]);
     }
 
@@ -91,7 +82,6 @@ class UserController extends Controller
             'loginusername' => 'required',
             'loginpassword' => 'required'
         ]);
-
         if (auth()->attempt(['username' => $incomingFields['loginusername'], 'password' => $incomingFields['loginpassword']])) {
             $request->session()->regenerate();
             return redirect('/')->with('success', 'You have successfully logged in.');
@@ -107,9 +97,7 @@ class UserController extends Controller
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => ['required', 'min:8', 'confirmed']
         ]);
-
         $incomingFields['password'] = bcrypt($incomingFields['password']);
-
         $user = User::create($incomingFields);
         auth()->login($user);
         return redirect('/')->with('success', 'Thank you for creating an account.');

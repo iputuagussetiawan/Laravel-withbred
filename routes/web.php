@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FollowController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +15,6 @@ use App\Http\Controllers\FollowController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/admins-only', function () {
     if (Gate::allows('visitAdminPages')) {
         return 'Only admin should be able to see this page';
@@ -32,7 +30,6 @@ Route::get('/manage-avatar', [UserController::class, "showAvatarForm"])->middlew
 Route::post('/manage-avatar', [UserController::class, "storeAvatar"])->middleware('mustBeLoggedIn');;
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
 //bog
 Route::get('/create-post', [PostController::class, 'showCreateForm'])->middleware('mustBeLoggedIn');
 Route::post('/create-post', [PostController::class, 'storeNewPost'])->middleware('mustBeLoggedIn');
@@ -44,8 +41,6 @@ Route::get('/search/{term}', [PostController::class, 'search']);
 
 //Profile related routes
 Route::get('/profile/{user:username}', [UserController::class, 'profile']);
-
-
 
 // Follow related routes
 Route::post('/create-follow/{user:username}', [FollowController::class, 'createFollow'])->middleware('mustBeLoggedIn');

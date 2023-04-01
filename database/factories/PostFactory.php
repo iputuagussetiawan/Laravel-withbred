@@ -18,11 +18,13 @@ class PostFactory extends Factory
     {
         return [
             'user_id' => 11,
-            'category_id'=>mt_rand(1,2),
+            'category_id'=>mt_rand(1,3),
             'title' => fake()->sentence(mt_rand(2,8)),//generate title with minimal text 8 and max 8 text
             'slug'=>fake()->slug(),
-            'body' => fake()->paragraph(),
-            'excerpt'=> fake()->paragraph(mt_rand(5,10)),
+            'body' => collect(fake()->paragraphs(mt_rand(5,10)))
+                        ->map(fn($p)=>"<p>$p</p>")
+                        ->implode(''),
+            'excerpt'=> fake()->paragraph(),
             'created_at' => date("Y-m-d H:i:s")
         ];
     }

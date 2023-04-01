@@ -13,6 +13,7 @@ class Post extends Model
 
     //protected $fillable = ['title','slug','body', 'user_id'];
     protected $guarded = ['id'];
+    protected $with = ['category', 'user'];
 
     public function toSearchableArray()
     {
@@ -30,5 +31,19 @@ class Post extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function scopeFilter($query, array $filters)
+    {
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query->where('title', 'like', '%' . $search . '%')
+                ->orWhere('body', 'like', '%' . $search . '%');
+        });
+
+        $query->when($filters['category'] ?? false, function ($query, $category) {
+            return $query->whereHas('category', function ($query) use ($category) {
+                $query->where('slug', $category);
+            });
+        });
     }
 }

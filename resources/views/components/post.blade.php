@@ -1,10 +1,14 @@
-<a href="/post/{{$post->slug}}" class="list-group-item list-group-item-action">
-    <img class="avatar-tiny" src="{{$post->user->avatar}}" />
-    <strong>{{$post->title}}</strong>
-    <span class="text-muted small">
+<div class="card mb-3">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{$post->title}}</h5>
+        <p class="card-text"><small class="text-muted">on {{$post->created_at->format('n/j/Y')}}</small></p>
+        <img width="30" height="30" class="avatar-tiny rounded" src="{{$post->user->avatar}}" />
         @if(!isset($hideAuthor))
-        by {{$post->user->username}}
+            by {{$post->user->username}}
         @endif
-        on {{$post->created_at->format('n/j/Y')}}
-    </span>
-</a>
+        <p class="card-text"><small class="text-muted">{{ $post->created_at->diffForHumans() }}</small></p>
+        <a href="categories/{{ $post->category->slug }}" >{{ $post->category->name }}</a> | 
+        <a href="/post/{{$post->slug}}">Read More..</a>
+    </div>
+</div>

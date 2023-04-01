@@ -33,7 +33,7 @@ Route::post('/manage-avatar', [UserController::class, "storeAvatar"])->middlewar
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //bog
-Route::get('/post', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
 Route::get('/create-post', [PostController::class, 'showCreateForm'])->middleware('mustBeLoggedIn');
 Route::post('/create-post', [PostController::class, 'storeNewPost'])->middleware('mustBeLoggedIn');
 Route::get('/post/{post:slug}', [PostController::class, 'viewSinglePost']);

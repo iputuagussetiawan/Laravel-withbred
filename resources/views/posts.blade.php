@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container py-md-5 container--narrow">
-        <h2 class="text-center mb-4">All Post</h2>
+        <h2 class="text-center mb-4">{{ $title }}</h2>
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <form action="/posts">
@@ -18,12 +18,14 @@
         <div class="row">
             @foreach($posts as $post)
                 <div class="col-md-3">
-                    <x-post :post="$post"/>
+                    <x-cards.post :post="$post"/>
                 </div>               
             @endforeach
         </div>
         @else
         <h2>No Post Found</h2>
         @endif
+        {{ $posts->links() }}
     </div>
+    
 </x-layout>

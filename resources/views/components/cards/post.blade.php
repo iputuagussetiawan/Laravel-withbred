@@ -8,7 +8,7 @@
             by {{$post->user->username}}
         @endif
         <p class="card-text"><small class="text-muted">{{ $post->created_at->diffForHumans() }}</small></p>
-        <a href="categories/{{ $post->category->slug }}" >{{ $post->category->name }}</a> | 
+        <a href="/posts?category={{ $post->category->slug }}" >{{ $post->category->name }}</a> | 
         <a href="/post/{{$post->slug}}">Read More..</a>
     </div>
 </div>

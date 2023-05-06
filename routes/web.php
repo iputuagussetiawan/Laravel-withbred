@@ -17,13 +17,14 @@ use App\Models\Category;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/admins-only', function () {
+Route::get('/administrator', function () {
     if (Gate::allows('visitAdminPages')) {
         return 'Only admin should be able to see this page';
     }
     return 'You canot view this page';
 })->middleware('can:visitAdminPages');
 
+//auth
 Route::get('/', [UserController::class, "showCorrectHomepage"])->name('login');
 Route::post('/register', [UserController::class, "register"])->middleware('guest');
 Route::post('/login', [UserController::class, "login"])->middleware('guest');

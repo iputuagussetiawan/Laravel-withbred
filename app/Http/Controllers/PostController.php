@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -11,12 +12,16 @@ class PostController extends Controller
     //
     public function index()
     {
+        $title="";
+        if(request('category')){
+            $category=Category::firstWhere('slug',request('category'));
+            $title=' in ' .$category->name;
+        }
         return view('posts', [
-            "title" => "News",
-            "title" => "All Posts",
+            "title" => "All Posts".$title,
             // "posts" => Post::all()
             //"posts" => Post::with(['user','category'])->latest()->get()
-            "posts" => Post::latest()->filter(request(['search','category']))->get()
+            "posts" => Post::latest()->filter(request(['search','category']))->paginate(8)->withQueryString()
         ]);
     }
     

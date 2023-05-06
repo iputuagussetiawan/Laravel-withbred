@@ -20,7 +20,7 @@
             Posted by <a href="/profile/{{ $post->user->username}}">{{$post->user->username}}</a> 
             on {{ $post->created_at->format('n/j/Y') }}
 
-            category : <a href="/categories/{{$post->category->slug }}">{{ $post->category->name }}</a> 
+            category : <a href="/posts/?category={{$post->category->slug }}">{{ $post->category->name }}</a> 
         </p>
         <div class="body-content">
             {!!$post->body!!}

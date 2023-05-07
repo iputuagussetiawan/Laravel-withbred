@@ -11,8 +11,12 @@
                 OurApp
             @endisset
         </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;200;300;400;700&family=Source+Code+Pro:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
         @vite (['resources/js/app.js'])
         @vite (['resources/scss/app.scss'])
+        @stack('page-styles')
     </head>
     <body>
         <header class="navbar-custom header-bar mb-3">
@@ -81,7 +85,9 @@
         </main>
         <!-- footer begins -->
         <footer class="border-top text-center small text-muted py-3">
-        <p class="m-0">Copyright &copy; {{ date('Y') }} <a href="/" class="text-muted">Our App</a>. All rights reserved.</p>
+            <p class="m-0">Copyright &copy; {{ date('Y') }} <a href="/" class="text-muted">Our App</a>. All rights reserved.</p>
         </footer>
+
+        @stack('page-scripts')
     </body>
 </html>

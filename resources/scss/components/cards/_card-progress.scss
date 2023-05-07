@@ -1,0 +1,28 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-progress{
+    &__counter{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: #00684a;
+        white-space: nowrap;
+        margin-bottom: 8px;
+        font-family: 'Source Code Pro', monospace;
+    }
+    &__description{
+        font-family: "Source Code Pro", monospace;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        a{
+            color: #001e2b;
+        }
+
+        p{
+            color: #001e2b;
+        }
+    }
+}

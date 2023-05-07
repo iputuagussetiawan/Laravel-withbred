@@ -21,15 +21,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        $qtyUserID=10;
+        $qtyUserID=5;
         $userIDAdmin=$qtyUserID+1;
         User::factory($qtyUserID)->create();
         DB::table('users')->insert([
             'id' =>$userIDAdmin,
             'username' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('12345678'),
-            'isAdmin' => 1
+            'password' => Hash::make('password'),
+            'is_admin' => 1
         ]);
         Category::create([
             'name'=>'Web Programming',
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             'slug'=>'web-design',
         ]);
         
-        Post::factory(20)->create();
+        Post::factory(1000)->create();
         
     }
 }

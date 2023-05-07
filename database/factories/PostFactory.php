@@ -17,7 +17,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => 11,
+            'user_id' => mt_rand(1,6),
             'category_id'=>mt_rand(1,3),
             'title' => fake()->sentence(mt_rand(2,8)),//generate title with minimal text 8 and max 8 text
             'slug'=>fake()->slug(),

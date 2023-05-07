@@ -45,7 +45,9 @@ class PostController extends Controller
     {
         $ourHTML = strip_tags(Str::markdown($post->body), '<p><ul><li><strong><em><h3><br>'); //allow this tg read in view selain ini disalllow
         $post['body'] =  $ourHTML;
-        return view('single-post', ['post' => $post]);
+        return view('single-post', [
+            'post' => $post
+        ]);
     }
 
     public function delete(Post $post)
@@ -56,7 +58,9 @@ class PostController extends Controller
 
     public function showEditForm(Post $post)
     {
-        return view('edit-post', ['post' => $post]);
+        return view('edit-post', [
+            'post' => $post
+        ]);
     }
 
     public function actuallyUpdate(Post $post, Request $request)

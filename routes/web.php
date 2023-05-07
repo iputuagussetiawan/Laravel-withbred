@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FollowController;
 use App\Models\Category;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +68,11 @@ Route::get('/categories/{category:slug}', function(Category $category){
         'category'=>$category->name
     ]);
 });
+
+Route::get('/authors/{author:username}', function(User $author){
+    return view('auhorposts',[
+        'title'=>"Author Post",
+        'posts'=>$author->posts,
+    ]);
+});
+

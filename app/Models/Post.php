@@ -11,8 +11,13 @@ class Post extends Model
     use Searchable;
     use HasFactory;
 
+    //protected $fillable = field mana saja yang boleh diisi
     //protected $fillable = ['title','slug','body', 'user_id'];
+
+    //protected $guarded = feild mana yang gg bole diisi sisanya bole diisi
     protected $guarded = ['id'];
+
+    
     protected $with = ['category', 'user'];
 
     public function toSearchableArray()
@@ -24,6 +29,11 @@ class Post extends Model
     }
 
     public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
     }

@@ -18,7 +18,7 @@
         <div class="row">
             @foreach($posts as $post)
                 <div class="col-md-3">
-                    <x-cards.post :post="$post"/>
+                    <x-cards.post2 :post="$post"/>
                 </div>               
             @endforeach
         </div>
@@ -27,5 +27,4 @@
         @endif
         {{ $posts->links() }}
     </div>
-    
 </x-layout>

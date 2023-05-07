@@ -18,7 +18,7 @@ class Post extends Model
     protected $guarded = ['id'];
 
     
-    protected $with = ['category', 'user'];
+    protected $with = ['category','user','author'];
 
     public function toSearchableArray()
     {
@@ -55,5 +55,11 @@ class Post extends Model
                 $query->where('slug', $category);
             });
         });
+
+        $query->when($filters['author']??false, fn($query,$author)=>
+            $query->whereHas('author', fn($query)=>
+                $query->where('username',$author)
+            )
+        );
     }
 }

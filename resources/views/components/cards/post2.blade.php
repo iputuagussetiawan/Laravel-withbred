@@ -6,7 +6,7 @@
         <img width="30" height="30" class="avatar-tiny rounded" src="{{$post->user->avatar}}" />
        
         @if(!isset($hideAuthor))
-            <a href="/authors/{{$post->author->username}}">by {{$post->author->username}}</a>
+            <a href="/posts?author={{$post->author->username}}">by {{$post->author->username}}</a>
             
         @endif
         <p class="card-text"><small class="text-muted">{{ $post->created_at->diffForHumans() }}</small></p>

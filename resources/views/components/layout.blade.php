@@ -44,7 +44,7 @@
                     <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a>
                     <form action="/logout" method="POST" class="d-inline">
                         @csrf
-                        <button class="btn btn-sm btn-secondary">Sign Out</button>
+                        <button class="btn btn-sm btn-success">Sign Out</button>
                     </form>
                 </div>
                 @else
@@ -58,7 +58,7 @@
                                 <input name="loginpassword" class="form-control form-control-sm input-dark" type="password" placeholder="Password" />
                             </div>
                             <div class="col-md-auto">
-                                <button class="btn btn-primary btn-sm">Sign In</button>
+                                <button class="btn btn-success btn-sm">Sign In</button>
                             </div>
                         </div>
                     </form>

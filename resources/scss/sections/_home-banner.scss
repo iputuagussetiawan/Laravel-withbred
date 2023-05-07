@@ -1,11 +1,29 @@
 @use '../config/variable' as *;
 @use '../config/mixin' as *;
 .banner{
-    //background-color: #001e2b;
-    margin-left: 15%;
+    padding-left:calc((100% - 1400px)/2);
+    background-color: $white;
     &__grid{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(12,1fr);
+        padding-left: 1rem;
+    }
+    &__info{
+        position: relative;
+        grid-column: 1/8;
+        grid-row: 1;
+        padding: 80px 60px 120px 0px;
+        background-color: $white;
+        border-bottom-right-radius: 300px;
+        z-index: 2;
+        
+    }
+    &__image{
+        position: relative;
+        grid-column: 5/-1;
+        grid-row: 1;
+        background-color: #001e2b;
+        z-index: 1;
     }
     &__title{
         margin-bottom: 32px;
@@ -34,6 +52,7 @@
     }
 
     &__progress{
+        width: 80%;
         display: grid;
         grid-template-columns:repeat(auto-fill, minmax(120px, 1fr));
         padding: 32px 0px;

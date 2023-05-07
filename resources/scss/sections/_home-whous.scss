@@ -1,0 +1,27 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+@use '../components/cards/_card-whous.scss' as *;
+.who-us{
+    position: relative;
+    background-color: $blue-800;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0;
+        bottom: 50%;
+        right: 60%;
+        background-color: $white;
+        border-bottom-right-radius: 120px;
+        border-bottom-left-radius: 120px;
+
+
+    }
+    &__grid{
+        @include d-grid();
+    }
+    &__content{
+        grid-column: 2/12;
+    }
+    
+}

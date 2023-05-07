@@ -59,7 +59,35 @@
             </div>
           </div>
         </div>
+        <div class="banner__image">
+          
+        </div>
       </div>
+  </section>
+  <section class="who-us section-padding--bottom">
+    <div class="container">
+      <div class="who-us__grid">
+        <div class="who-us__content">
+          <div class="card-whous">
+            <div class="card-whous__info">
+                <h2 class="card-whous__title">
+                  MongoDB University
+                </h2>
+                <div class="card-whous__description">
+                  The new learning experience makes picking up knowledge, developing a fundamental MongoDB skill set, and getting certified both quick and easy.
+                </div>
+                <div class="card-whous__action">
+                  <a href="" class="btn btn-secondary">Explore now</a>
+                </div>
+            </div>
+            <div class="card-whous__image">
+              <img src="{{ asset('images/cms-home-image.svg') }}" alt="who us image">
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
   </section>
   <div class="container section-padding">
     <div class="row align-items-center">

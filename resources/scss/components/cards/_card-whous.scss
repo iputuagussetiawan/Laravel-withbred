@@ -1,0 +1,37 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-whous{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    justify-content: space-between;
+    border-radius: 40px;
+    background-color: #F5F7FA;
+    box-shadow: 0px 7px 13px rgb(0 0 0 / 13%);
+    &__info{
+        padding: 55px 80px;
+        grid-column: 1/5;
+        grid-row: 1;
+        z-index: 2;
+    }
+    &__image{
+        grid-column: 4/-1;
+        grid-row: 1;
+        z-index: 1;
+    }
+
+    &__title{
+        font-size: 44px;
+        line-height: 56px;
+        color: #001E2B;
+        font-family: 'Playfair Display', serif;
+    }
+    &__description{
+        padding: 32px 0px;
+        font-size: 18px;
+        line-height: 32px;
+        color: #3D4F58;
+    }
+}

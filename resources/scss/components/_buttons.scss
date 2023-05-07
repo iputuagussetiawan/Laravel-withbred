@@ -104,6 +104,17 @@
         box-shadow: inset 0px 0px 0px 1px $red-300, inset 0px -56px 0px $red-300;
     }
 }
+.btn.btn-secondary{
+    border-color: #001E2B;
+    background-color:#001E2B ;
+    color: $white;
+    transition: 0.4s ease;
+    border-radius: 4px;
+
+    &:hover{
+        border-radius: 60px;
+    }
+}
 
 .btn-ripple {
     position: relative;

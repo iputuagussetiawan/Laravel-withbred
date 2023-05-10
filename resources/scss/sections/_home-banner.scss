@@ -3,6 +3,13 @@
 .banner{
     padding-left:calc((100% - 1400px)/2);
     background-color: $white;
+    position: relative;
+    &__art-one{
+        position: absolute;
+        bottom: -100px;
+        right: 0px;
+        z-index: 2;
+    }
     &__grid{
         display: grid;
         grid-template-columns: repeat(12,1fr);
@@ -10,7 +17,7 @@
     }
     &__info{
         position: relative;
-        grid-column: 1/8;
+        grid-column: 1/9;
         grid-row: 1;
         padding: 80px 60px 120px 0px;
         background-color: $white;

@@ -20,7 +20,7 @@
     </head>
     <body>
         <header class="navbar-custom header-bar mb-3">
-            <div class="container d-flex flex-column flex-md-row align-items-center p-3">
+            <div class="container-fluid d-flex flex-column flex-md-row align-items-center p-3">
                 <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/">Our App</a></h4>
                 @auth
                 <div class="flex-row my-3 my-md-0 ms-auto">

@@ -1,0 +1,26 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+@use '../components/cards/_card-community.scss' as *;
+.community{
+    position: relative;
+    background-color: $blue-800;
+
+    &__title{
+        color: white;
+        font-family: 'Playfair Display', serif;
+        font-size: 64px;
+        padding: 0;
+        margin: 0;
+        line-height: 72px;
+    }
+    &__subtitle{
+        color: #b8c4c2;
+        font-size: 36px;
+    }
+
+    &__lists{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+}

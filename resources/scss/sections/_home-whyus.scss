@@ -1,6 +1,7 @@
 @use '../config/variable' as *;
 @use '../config/mixin' as *;
 @use '../components/cards/_card-whous.scss' as *;
+@use '../components/ui/_accordion-one.scss' as *;
 .who-us{
     position: relative;
     background-color: $blue-800;
@@ -8,14 +9,17 @@
         content: '';
         position: absolute;
         top: 0px;
-        left: 0;
-        bottom: 50%;
-        right: 60%;
+        left: 0px;
+        bottom: 0px;
+        right: 50%;
         background-color: $white;
-        border-bottom-right-radius: 120px;
-        border-bottom-left-radius: 120px;
-
-
+        border-bottom-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+    &__art-one{
+        position: absolute;
+        top: 0px;
+        left: -15px
     }
     &__grid{
         @include d-grid();

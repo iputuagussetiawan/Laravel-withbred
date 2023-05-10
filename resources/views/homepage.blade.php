@@ -3,6 +3,7 @@
     @vite (['resources/scss/pages/home.scss'])
   @endpush
   <section class="banner">
+      <img class="banner__art-one" src="{{ asset('images/banner-art-bottom-right.svg') }}" alt="art who us">
       <div class="banner__grid">
         <div class="banner__info">
           <p class="banner__subtitle">
@@ -65,6 +66,7 @@
       </div>
   </section>
   <section class="who-us section-padding--bottom">
+    <img class="who-us__art-one" src="{{ asset('images/who-us__art-left.svg') }}" alt="art who us">
     <div class="container">
       <div class="who-us__grid">
         <div class="who-us__content">
@@ -86,6 +88,97 @@
           </div>
         </div>
        
+      </div>
+    </div>
+  </section>
+  <section class="community section-padding">
+    <div class="container">
+      <h2 class="community__title">
+        Built by developers, for developers
+      </h2>
+      <p class="community__subtitle">
+        The document data model maps to how you think and code.
+      </p>
+      <div class="community__grid">
+        <div class="accordion accordion-flush accordion-one" id="accordion-one">
+          <div class="accordion-item accordion-one__item">
+            <h2 class="accordion-header accordion-one__header" id="flush-headingOne">
+              <button class="accordion-button  collapsed accordion-one__button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Model
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse accordion-one__collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordion-one">
+              <div class="accordion-body accordion-one__body">
+                Break out of rigid, tabular data structures with flexible documents that map directly to objects in your code. Embed related data into a single document to increase performance and minimize computational cost.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item accordion-one__item">
+            <h2 class="accordion-header accordion-one__header" id="flush-headingTwo">
+              <button class="accordion-button collapsed accordion-one__button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Query
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse accordion-one__collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordion-one">
+              <div class="accordion-body accordion-one__body">
+                Take advantage of a simple and expressive query API to retrieve and modify documents in a single collection or join across collections. Transform and analyze your data in place – no ETL or duplication needed – with a powerful aggregation pipeline.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item accordion-one__item">
+            <h2 class="accordion-header accordion-one__header" id="flush-headingThree">
+              <button class="accordion-button collapsed accordion-one__button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Optimize
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse accordion-one__collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion-one">
+              <div class="accordion-body accordion-one__body">
+                Optimize queries, react instantly to database changes, and generate materialized views on-demand. MongoDB makes it easy to receive and process millions of requests per day with no change in performance.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="community__image-container">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="community__lists">
+        <div class="card-community">
+          <div class="card-community__icon-container">
+            <img class="card-community__icon" src="{{ asset('images/pages/home/sections/community/doc.svg') }}" alt="doc image">
+          </div>
+          <h3 class="card-community__title">
+            Docs
+          </h3>
+          <div class="card-community__description">
+            Reference manuals, articles, and code samples — all the technical documentation you need to deploy, configure, and run MongoDB.
+          </div>
+          <a href="" class="card-community__link">Documentation <span class="card-community__link-arrow"></span></a>
+        </div>
+        <div class="card-community">
+          <div class="card-community__icon-container">
+            <img class="card-community__icon" src="{{ asset('images/pages/home/sections/community/develop-center.svg') }}" alt="developer center image">
+          </div>
+          <h3 class="card-community__title">
+            Developer Center
+          </h3>
+          <div class="card-community__description">
+            The latest MongoDB tutorials, videos, and code examples shown in the language of your choice.
+          </div>
+          <a href="" class="card-community__link">Start Building <span class="card-community__link-arrow"></span></a>
+        </div>
+        <div class="card-community">
+          <div class="card-community__icon-container">
+            <img class="card-community__icon" src="{{ asset('images/pages/home/sections/community/community-forum.svg') }}" alt="developer center image">
+          </div>
+          <h3 class="card-community__title">
+            Community Forum
+          </h3>
+          <div class="card-community__description">
+            Join 140K+ developers on our Community Forums to get advice, learn tips and tricks, and share your projects and experience.
+          </div>
+          <a href="" class="card-community__link">Join the Community <span class="card-community__link-arrow"></span></a>
+        </div>
       </div>
     </div>
   </section>

@@ -1,0 +1,43 @@
+@use "../../config/_mixin.scss" as *;
+@use "../../config/_variable.scss" as *;
+
+.accordion-one{
+    button:not(.collapsed) {
+        color: $white;
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
+    }
+    &__button{
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 48px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        color: $white;
+        background-color: transparent;
+        &:focus{
+            background: transparent;
+            color: $white;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    &__item{
+        //border-left: 5px solid #006cfa !important;
+        border-left: 5px solid #006cfa !important;
+        margin-bottom: 32px;
+        background-color: transparent;
+        border-bottom: none;
+        padding-left: 32px;
+    }
+    &__body{
+        position: relative;
+        padding-left: 0px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        color: #b8c4c2;
+    }
+}

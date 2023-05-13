@@ -3,4 +3,7 @@
 @use '../sections/_home-banner.scss' as *;
 @use '../sections/_home-whyus.scss' as *;
 @use '../sections/_home-community.scss' as *;
-@use '../components/cards/_card-progress.scss'
+@use '../sections/_home-testimony.scss' as *;
+@use '../sections/_home-platform.scss' as *;
+@use '../components/cards/_card-progress.scss' as *;
+@use '../components/ui/_tabs.scss' as *;

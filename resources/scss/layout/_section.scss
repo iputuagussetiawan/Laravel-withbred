@@ -1,51 +1,29 @@
 @use "../config/_variable.scss" as *;
 
 :root {
-	--section-padding: 100px;
-	--margin-bottom-title-wrapper: 50px;
-	--font-size-section-title: 40px;
-	--line-height-section-title: 50px;
-	--font-size-section-title-description: 18px;
-	--margin-bottom-section-title: 8px;
+	--section-padding: 104px;
+	
 }
 
 @media only screen and (max-width: 1399.98px) {
 	:root {
 		--section-padding: 80px;
-		--margin-bottom-title-wrapper: 42px;
+		
 	}
 }
 
 @media only screen and (max-width: 1199.98px) {
 	:root {
 		--section-padding: 60px;
-		--font-size-section-title: 37px;
-		--line-height-section-title: 42px;
-		--font-size-section-title-description: 16px;
 	}
 }
 
 @media only screen and (max-width: 991.98px) {
 	:root {
 		--section-padding: 40px;
-		--font-size-section-title: 32px;
 	}
 }
 
-@media only screen and (max-width: 767.98px) {
-	:root {
-		--font-size-section-title: 27px;
-		--margin-bottom-title-wrapper: 32px;
-		--font-size-section-title-description: 18px;
-	}
-}
-
-@media only screen and (max-width: 575.98px) {
-	:root {
-		--font-size-section-title: 24px;
-		--font-size-section-title-description: 16px;
-	}
-}
 /*-----------------------------------------
 //////////// SECTION PADDING //////////////
 -----------------------------------------*/
@@ -73,53 +51,23 @@
 -----------------------------------------*/
 .section-title-wrapper {
 	position: relative;
-	margin-bottom: var(--margin-bottom-title-wrapper);
+	margin-bottom: 40px;
 	z-index: 10;
-
-	&.additional-margin-top {
-		margin-top: 42px;
-	}
 }
 .section-title {
-	position: relative;
-	margin-bottom: var(--margin-bottom-section-title);
-	font-weight: 700;
-	font-size: var(--font-size-section-title);
-	line-height: var(--line-height-section-title) ;
-	text-transform: capitalize;
-	color: $neutral-100;
-	z-index: 5;
-
-	&__subtitle {
-		margin-bottom: 8px;
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 28px;
-		color: $secondary-80;
-	}
-
-	&__description {
-		margin: 0px;
-		font-weight: 400;
-		font-size: var(--font-size-section-title-description);
-		line-height: 28px;
-		color:$neutral-90;
-	}
-
-	@media only screen and (max-width: 767.98px) {
-		&__subtitle {
-			font-size: 14px;
-			line-height: 18px;
-		}
-	}
+	color: $white;
+	font-family: 'Playfair Display', serif;
+	font-size: 64px;
+	padding: 0;
+	margin: 0;
+	line-height: 72px;
 }
 
 .section-subtitle{
-	margin-bottom: 4px;
-	font-size: 18px;
-	color: $primary;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+	font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    color: #b8c4c2;
 }
 
 .section-content{

@@ -1,0 +1,97 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+@use '../components/cards/_card-testimonial.scss' as *;
+
+.testimony{
+    position: relative;
+    background-color: #21313c;
+    padding: 104px 0px 304px 0px;
+    overflow: hidden;
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: -32px;
+        text-align: left;
+        width: auto;
+
+        border-radius: 9999px;
+        border: 1px solid #3d4f58;
+        padding: 2px 8px;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        background: $white;
+        opacity: 1;
+        transition: 0.4s ease;
+    }
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #00ed64;
+        width: 30px;
+    }
+    .swiper-slide{
+        .card-testimonial__message,
+        .card-testimonial__footer{
+            opacity: 0.5;
+        }
+    }
+    .swiper-slide.swiper-slide-active{
+        .card-testimonial{
+            transition: 0.4s ease;
+            border: 1px solid #3d4f58;
+        }
+        .card-testimonial__message,
+        .card-testimonial__footer{
+            opacity: 1;
+            transition: 0.4s ease;
+        }
+    }
+    &__art-one{
+        position: absolute;
+        top: -437px;
+        right: 0px;
+    }
+
+    &__grid{
+        display: grid;
+        margin-left: calc((100% - 1400px)/2);
+        padding-left: 1rem;
+        grid-template-columns: repeat(12,1fr);
+    }
+
+    &__info-container{
+        grid-column: 1/4;
+        margin-right: 100px;
+    }
+
+    &__title{
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 36px;
+        color: $white;
+        line-height: 48px;
+    }
+    &__description{
+        margin: 15px 0px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #b8c4c2;
+        line-height: 36px;
+    }
+
+    &__slider-container{
+        position: absolute;
+        top: 104px;
+        right: -200px;
+        max-width: 1400px;
+        padding-bottom: 80px;
+        grid-column: 1/-1;
+    }
+    &__pagination-container{
+        position: relative;
+        grid-column: 1/-1;
+        
+    }
+}

@@ -4,6 +4,7 @@
 .card-community{
     position: relative;
     border: 1px solid #3d4f58;
+    background-color: #001e2b;
     padding: 24px 24px 64px 24px;
     transition: 0.4s ease;
     border-radius: 24px;
@@ -74,7 +75,7 @@
         background: #061621;
     }
 
-    &__link:hover &__link-arrow {
+    &:hover &__link-arrow {
         width: 50px;
     }
 }

@@ -1,0 +1,55 @@
+@use "../../../config/_mixin.scss" as *;
+@use "../../../config/_variable.scss" as *;
+.dropdown-large{
+    padding: 64px;
+    border-radius: 0px 0px 16px 16px;
+    &__grid-4{
+        display: grid;
+        grid-template-columns: repeat(4,250px);
+        gap: 30px;
+    }
+    &__grid-3{
+        display: grid;
+        grid-template-columns: repeat(3,250px);
+        gap: 30px;
+    }
+
+    &__title-wrapper{
+        border-bottom: 1px solid #e7eeec;
+    }
+    &__title{
+        margin-bottom: 0px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+    }  
+    &__subtitle{
+        color: $primary-50;
+        font-weight: 600;
+        font-family: "Source Code Pro", monospace;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    &__menu{
+        margin: 32px 0px 0px 0px;
+    }
+
+    &__list{
+        margin: 0px;
+        list-style: none;
+        padding: 0px;
+    }
+    &__list-item{
+        margin-bottom: 16px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+    &__list-link{
+        font-size: 16px;
+        font-weight: 300;
+        color: $primary-50;
+    }
+
+}

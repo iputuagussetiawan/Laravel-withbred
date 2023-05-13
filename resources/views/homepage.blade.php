@@ -92,6 +92,7 @@
     </div>
   </section>
   <section class="community section-padding">
+    <img class="community__art-one" src="{{ asset('images/pages/home/sections/community/green-outline.svg') }}" alt="outline">
     <div class="container">
       <h2 class="community__title">
         Built by developers, for developers
@@ -107,7 +108,7 @@
                 Model
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse accordion-one__collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordion-one">
+            <div id="flush-collapseOne" class="accordion-collapse collapse accordion-one__collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordion-one">
               <div class="accordion-body accordion-one__body">
                 Break out of rigid, tabular data structures with flexible documents that map directly to objects in your code. Embed related data into a single document to increase performance and minimize computational cost.
               </div>
@@ -182,6 +183,184 @@
       </div>
     </div>
   </section>
+  <section class="testimony section-padding">
+    <img class="testimony__art-one" src="{{ asset('images/pages/home/sections/testimonial/testimonial-art.svg') }}" alt="outline">
+    <div class="testimony__grid">
+      <div class="testimony__info-container">
+        <h2 class="testimony__title">
+          Don’t just take our word for it
+        </h2>
+        <div class="testimony__description">
+          Find out why MongoDB is the industry’s most used modern database for the 5th year in a row.
+        </div>
+      </div>
+      <div class="testimony__slider-container">
+        <div class="swiper swiper-testimonial">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-testimonial">
+                <div class="card-testimonial__body">
+                  <h3 class="card-testimonial__message">
+                    “MongoDB is my favorite. Atlas is an amazing product and service”
+                  </h3>
+                </div>
+                <div class="card-testimonial__footer">
+                  <h4 class="card-testimonial__messenger-name">
+                    Steven Oketch 
+                    <span class="card-testimonial__messenger-company">iSteve_zion</span>
+                  </h4>
+                  <p class="card-testimonial__messenger-profesi">Web Developer; MERN Stack</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-testimonial">
+                <div class="card-testimonial__body">
+                  <h3 class="card-testimonial__message">
+                    “MongoDB is my favorite. Atlas is an amazing product and service”
+                  </h3>
+                </div>
+                <div class="card-testimonial__footer">
+                  <h4 class="card-testimonial__messenger-name">
+                    Steven Oketch 
+                    <span class="card-testimonial__messenger-company">iSteve_zion</span>
+                  </h4>
+                  <p class="card-testimonial__messenger-profesi">Web Developer; MERN Stack</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-testimonial">
+                <div class="card-testimonial__body">
+                  <h3 class="card-testimonial__message">
+                    “MongoDB is my favorite. Atlas is an amazing product and service”
+                  </h3>
+                </div>
+                <div class="card-testimonial__footer">
+                  <h4 class="card-testimonial__messenger-name">
+                    Steven Oketch 
+                    <span class="card-testimonial__messenger-company">iSteve_zion</span>
+                  </h4>
+                  <p class="card-testimonial__messenger-profesi">Web Developer; MERN Stack</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-testimonial">
+                <div class="card-testimonial__body">
+                  <h3 class="card-testimonial__message">
+                    “MongoDB is my favorite. Atlas is an amazing product and service”
+                  </h3>
+                </div>
+                <div class="card-testimonial__footer">
+                  <h4 class="card-testimonial__messenger-name">
+                    Steven Oketch 
+                    <span class="card-testimonial__messenger-company">iSteve_zion</span>
+                  </h4>
+                  <p class="card-testimonial__messenger-profesi">Web Developer; MERN Stack</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="testimony__pagination-container">
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="platform section-padding">
+    <div class="container">
+      <div class="platform__inner">
+        <div class="platform__header">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">MongoDB Atlas</h2>
+            <h2 class="section-subtitle">The developer data platform for any use case.</h2>
+          </div>
+          <div class="btn-wrapper">
+            <a href="" class="btn btn-simple2">
+              <span class="btn-simple2__text">Learn about the platform</span>
+              <span class="btn-simple2__arrow"></span>
+            </a>
+          </div>
+        </div>
+        <ul class="navtab-custom nav nav-pills" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Operational</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Transactional</button>
+          </li>
+        </ul>
+        <div class="tab-content-custom tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="tab-content-custom__title">
+                  Search Use Cases
+                </h3>
+                <div class="tab-content-custom__info">
+                  <p>Combine three systems - database, search engine, and sync mechanisms - into one and deliver 30-50% faster. Build catalog and content search, in-app search, and single view into your application with MongoDB Atlas Search.</p>
+                </div>
+                <div class="tab-content-custom__action">
+                  <a href="#" class="btn btn-success">Learn More</a>
+                  <a href="" class="btn btn-simple2">
+                    <span class="btn-simple2__text">Documentation</span>
+                    <span class="btn-simple2__arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="tab-content-custom__title">
+                  Operational Use Cases
+                </h3>
+                <div class="tab-content-custom__info">
+                  <p>Optimize write performance with a document data model that maps to your application’s access patterns. Meet a wide range of query requirements via a single query API that supports everything from simple lookups to complex processing pipelines for data analytics and transformations.</p>
+                </div>
+                <div class="tab-content-custom__action">
+                  <a href="#" class="btn btn-success">Learn More</a>
+                  <a href="" class="btn btn-simple2">
+                    <span class="btn-simple2__text">Documentation</span>
+                    <span class="btn-simple2__arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="tab-content-custom__title">
+                  Transactional Use Cases
+                </h3>
+                <div class="tab-content-custom__info">
+                  <p>Guarantee millisecond response times at scale with a flexible document data model and rich query capabilities – including secondary indexing, joins, multi-document ACID transactions and more.</p>
+                </div>
+                <div class="tab-content-custom__action">
+                  <a href="#" class="btn btn-success">Learn More</a>
+                  <a href="" class="btn btn-simple2">
+                    <span class="btn-simple2__text">Documentation</span>
+                    <span class="btn-simple2__arrow"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="container section-padding">
     <div class="row align-items-center">
       <div class="col-lg-7 py-3 py-md-5">
@@ -223,8 +402,6 @@
     </div>
   </div>
   @push('page-scripts')
-    <script>
-      
-    </script>
+    @vite (['resources/js/pages/home.js'])
   @endpush
 </x-layout>

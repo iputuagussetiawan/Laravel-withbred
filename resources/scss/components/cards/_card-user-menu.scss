@@ -1,0 +1,25 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-user-menu{
+    @include imageRatio(50,50,true);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    column-gap: 16px;
+    &__image-container{
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    &__full-name{
+        font-size: 14px;
+        margin: 0px;
+    }
+    &__email{
+        font-size: 12px;
+        margin: 0px;
+        font-weight: 600;
+        font-family: "Source Code Pro", monospace;
+    }
+
+}

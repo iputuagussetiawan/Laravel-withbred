@@ -4,9 +4,17 @@
 .community{
     position: relative;
     background-color: $blue-800;
-
+    &__art-one{
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     &__title{
-        color: white;
+        color: $white;
         font-family: 'Playfair Display', serif;
         font-size: 64px;
         padding: 0;
@@ -17,7 +25,6 @@
         color: #b8c4c2;
         font-size: 36px;
     }
-
     &__lists{
         display: grid;
         grid-template-columns: repeat(3,1fr);

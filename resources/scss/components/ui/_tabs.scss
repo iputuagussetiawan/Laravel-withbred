@@ -1,0 +1,47 @@
+@use "../../config/_mixin.scss" as *;
+@use "../../config/_variable.scss" as *;
+
+.navtab-custom{
+    margin-bottom: 80px;
+    .nav-item{
+        .nav-link{
+            border: 2px solid #b8c4c2;
+            margin-right: 16px;
+            padding: 16px 24px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: $white;
+            background: none;
+            outline: none;
+            white-space: nowrap;
+            border-radius: 60px;
+            transition: 0.4s ease;
+            &:hover{
+                border-color: #006cfa;
+            }
+            &.active{
+                background-color: #006cfa;
+                border-color: #006cfa;
+            }
+        }
+    }
+}
+.tab-content-custom{
+    &__title{
+        margin: 0px;
+        font-weight: 500;
+        font-size: 24px;
+        color: $white;
+    }
+    &__info{
+        margin-top: 15px;
+        margin-bottom: 48px;
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            color: #b8c4c2;
+        }
+    }
+}

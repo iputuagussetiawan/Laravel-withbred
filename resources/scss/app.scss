@@ -10,6 +10,8 @@
 @use "layout/_form.scss";
 @use "components/ui/_breadcrumb.scss";
 @use "components/ui/_buttons.scss";
+@use "components/ui/_event-banner.scss";
+@use "components/ui/dropdowns/_dropdown.scss";
 @use "components/ui/dropdowns/_dropdown-large.scss";
 @use "components/ui/dropdowns/_dropdown-menu-user.scss";
 @use "components/cards/_card-user-menu.scss";
@@ -291,18 +293,9 @@
 }
 
 
-// @media all and (min-width: 992px) {
-// 	.navbar .dropdown-menu-end{ right:0; left: auto;  }
-// 	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
-// 	.navbar .nav-item:hover .nav-link{ color: #fff;  }
-// 	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
-// 	.navbar .dropdown-menu.fade-up{ top:180%;  }
-// 	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
-// }	
 
-@media all and (min-width: 992px) {
-  .dropdown-large{min-width:500px;}
-}	
+
+
 
 
 

@@ -1,0 +1,65 @@
+@use "../../../config/_mixin.scss" as *;
+@use "../../../config/_variable.scss" as *;
+
+.dropdown-toggle{
+    &::before{
+        transition: 0.4s ease;
+    }
+    &::after{
+        border: none;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        background: url('https://api.iconify.design/ion/chevron-down-sharp.svg?color=%23454550') no-repeat center center / contain;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: 0.4s ease;
+    }
+
+    &.show::after{
+        transform: rotate(180deg);
+        background: url('https://api.iconify.design/ion/chevron-down-sharp.svg?color=%2300684a') no-repeat center center / contain;
+    }
+
+    &:hover::after,
+    &.active::after,
+    &.show::after{
+        background: url('https://api.iconify.design/ion/chevron-down-sharp.svg?color=%2300684a') no-repeat center center / contain;
+    }
+}
+.dropdown-menu{
+    top: calc(100% - 24px);
+    border-radius:0px 0px 8px;
+    //border-color: transparent;
+    //box-shadow: $box-shadow;
+
+    .menu-item:last-child .dropdown-item{
+        margin-bottom: 0px !important;
+    }
+    .dropdown-item{
+        position: relative;
+        padding: 8px 32px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 27px;
+        color: #454550;
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+
+        &:hover,
+        &.active{
+            background-color: transparent;
+            color: $primary;
+        }
+    }
+    .menu-item{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .nav-item{
+        margin-left: 0px !important;
+    }
+}

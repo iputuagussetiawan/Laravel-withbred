@@ -87,11 +87,10 @@
             </div>
           </div>
         </div>
-       
       </div>
     </div>
   </section>
-  <section class="community section-padding">
+  <section class="community section-padding--bottom">
     <img class="community__art-one" src="{{ asset('images/pages/home/sections/community/green-outline.svg') }}" alt="outline">
     <div class="container">
       <h2 class="community__title">

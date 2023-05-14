@@ -10,11 +10,22 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        bottom: 0px;
+        bottom: 250px;
         right: 50%;
         background-color: $white;
-        border-bottom-right-radius: 200px;
-        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 250px;
+        border-bottom-left-radius: 250px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 50%;
+        bottom: 0px;
+        left: calc(50% - 195px);
+        background-color:$blue-800;
+        border-top-left-radius: 250px;
+        border-bottom-right-radius: 250px;
     }
     &__art-one{
         position: absolute;
@@ -23,6 +34,7 @@
     }
     &__grid{
         @include d-grid();
+        padding-top: 72px;
     }
     &__content{
         grid-column: 2/12;

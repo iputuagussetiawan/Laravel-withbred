@@ -1,0 +1,27 @@
+@use "../../config/variable" as *;
+.event-banner{
+    display: flex;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: $white;
+    &__title{
+        padding-left: 16px;
+    }
+
+    &__button{
+        display: inline-block;
+        color: rgb(185, 234, 205);
+        border: 1px solid rgb(185, 234, 205);
+        border-radius: 100px;
+        padding: 5px 10px;
+        line-height: 12px;
+        font-weight: 300;
+        &:hover{
+            color:rgb(185, 234, 205);;
+        }
+    }
+}

@@ -45,22 +45,47 @@
 /*-----------------------------------------
 /////////////////////// SECTION PADDING END
 -----------------------------------------*/
+/*-----------------------------------------
+//////////// SECTION HEADER //////////////
+-----------------------------------------*/
+.section-header{
+	display: flex;
+	justify-content: space-between;
+}
+/*-----------------------------------------
+/////////////////////// SECTION HEADER END
+-----------------------------------------*/
+
 
 /*-----------------------------------------
 ////////////// SECTION TITLE //////////////
 -----------------------------------------*/
+.section-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .section-title-wrapper {
 	position: relative;
 	margin-bottom: 40px;
 	z-index: 10;
 }
 .section-title {
-	color: $white;
 	font-family: 'Playfair Display', serif;
 	font-size: 64px;
 	padding: 0;
 	margin: 0;
 	line-height: 72px;
+	color: #001E2B;
+
+	&--medium {
+		@extend .section-title;
+		font-family: $primary-font;
+		font-weight: 500;
+		color: #001E2B;
+		font-size: 36px;
+		line-height: 48px;
+	}
 }
 
 .section-subtitle{
@@ -68,6 +93,8 @@
     font-size: 36px;
     line-height: 56px;
     color: #b8c4c2;
+
+	
 }
 
 .section-content{

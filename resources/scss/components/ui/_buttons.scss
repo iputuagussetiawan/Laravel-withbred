@@ -25,7 +25,7 @@
     position: relative;
     &__arrow{
         position: absolute;
-        width: 32px;
+        width: 16px;
         top: 50%;
         left: calc(100% - 20px);
         transform: translateY(-50%);
@@ -61,60 +61,28 @@
     &:hover{
         color: #001e2b;
     }
-
     &:hover &__arrow{
         width: 50px;
     }
-}
 
-.btn-simple2{
-    color: $white;
-    position: relative;
-    transition: 0.4s ease;
-    &__arrow{
-        position: absolute;
-        width: 16px;
-        top: 50%;
-        left: calc(100% - 20px);
-        transform: translateY(-50%);
-        transition: 0.4s ease;
-
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 2px;
-            background-color: #00ED64;
+    &--white{
+        @extend .btn-simple;
+        color: $white;
+        .btn-simple__arrow{
+            &::before{
+                background-color: #00ED64;
+            }
+            &::after{
+                border: 2px solid #00ED64;
+                border-top: none;
+                border-left: none;
+            }
         }
-        &::after{
-            content: "";
-            position: absolute;
-            transform: translateY(-50%);
-            height: 2px;
-            border: 2px solid #00ED64;
-            border-radius: 2px;
-            width: 12px;
-            position: absolute;
-            border-top: none;
-            border-left: none;
-            height: 12px;
-            transform: rotate(-45deg);
-            right: 0;
-            top: -6px;
+        &:hover{
+            color: #00ED64 ;
         }
     }
-    &:hover{
-        color: #00ED64 ;
-    }
-
-    &:hover &__arrow{
-        width: 50px;
-    }
 }
-
 
 .btn.btn-success{
     border-color: #00684A;
@@ -122,7 +90,6 @@
     color: #001E2B;
     transition: 0.4s ease;
     border-radius: 4px;
-
     &:hover{
         border-radius: 60px;
     }
@@ -151,7 +118,6 @@
     color: $white;
     transition: 0.4s ease;
     border-radius: 4px;
-
     &:hover{
         border-radius: 60px;
     }

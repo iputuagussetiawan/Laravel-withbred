@@ -1,0 +1,14 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+@use '../components/ui/marquee/_marquee.scss' as *;
+@use '../components/cards/_card-tech.scss' as *;
+
+.tech-stack{
+    position: relative;
+    overflow: hidden;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

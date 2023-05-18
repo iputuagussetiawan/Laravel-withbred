@@ -25,12 +25,22 @@
         z-index: 2;
         
     }
-    &__image{
+    &__art-right{
+        margin-top: 100px;
         position: relative;
-        grid-column: 5/-1;
+        grid-column: 7/-1;
         grid-row: 1;
         background-color: #001e2b;
         z-index: 1;
+    }
+    &__image-container{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        position: relative;
+        grid-column: 7/-1;
+        grid-row: 1;
+        background-color: red;
+        z-index: 3;
     }
     &__title{
         margin-bottom: 32px;
@@ -49,6 +59,7 @@
     }
 
     &__description{
+        width: 60%;
         font-weight: 400;
         font-size: 20px;
         line-height: 32px;

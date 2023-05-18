@@ -1,0 +1,78 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+.card-trustedby{
+    &__image-container{
+        max-width: 165px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.card-trustedby-detail{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 100px;
+    &__image-container{
+        max-width: 250px;
+        margin-bottom: 32px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__list{
+        display: grid;
+        gap: 32px;
+    }
+    &__item-value{
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 56px;
+        color: #00684A;
+    }
+    &__item-description{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #001E2B;
+    }
+    &__message-container{
+        position: relative;
+    }
+
+    &__message{
+        margin: 32px 0px;
+        font-family: "Playfair Display", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 44px;
+        color:#001E2B;
+    }
+    &__company-category{
+        margin-bottom: 0px;
+        padding-left: 8px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        color: #014E3D;
+        text-transform: uppercase;
+        font-family: "Source Code Pro", monospace;
+        border-left: 2px solid#00ed64;
+    }
+
+    &__separator{
+        position: absolute;
+        top: 50%;
+        left: -150px;
+        transform: translateY(-50%);
+        width: 100px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

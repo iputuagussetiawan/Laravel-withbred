@@ -1,0 +1,58 @@
+@use "../../../config/_mixin.scss" as *;
+@use "../../../config/_variable.scss" as *;
+
+.marquee{
+    display: flex;
+    overflow: visible;
+    flex-grow: 1;
+    user-select: none;
+    gap: 0px;
+    .paused &__group {
+        animation-play-state: paused;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: auto;
+        min-width: 100vw;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+    &__group{
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0px;
+        min-width: 100%;
+        overflow: visible;
+    }
+
+    &--reverse{
+        @extend .marquee;
+
+        .marquee__group{
+            animation-direction: reverse;
+            -delay: -3s;
+        }
+    }
+}
+
+.shouldAnimate {
+    animation: scroll-x 60s linear infinite;
+}
+
+@keyframes scroll-x {
+	0% {
+        transform: translateX(0);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

@@ -1,0 +1,11 @@
+@use '../config/variable' as *;
+@use '../config/mixin' as *;
+@use '../components/cards/_card-cta.scss' as *;
+
+.cta{
+    &__grid{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 50px;
+    }
+}

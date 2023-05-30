@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/scss/app.scss',
                 'resources/scss/pages/home.scss',
                 'resources/js/app.js',
+                'resources/js/pages/home.js',
             ],
             refresh: [
                 'routes/**',

@@ -4,7 +4,7 @@
             <h2 class="text-center mb-4">The Latest From Those You Follow</h2>
             <div class="list-group">
                 @foreach ($posts as $post)
-                    <x-post :post="$post" />
+                    <x-cards.post2 :post="$post" />
                 @endforeach
             </div>
             <div class="mt-4">

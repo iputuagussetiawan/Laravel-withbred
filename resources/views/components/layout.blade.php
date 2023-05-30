@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header class="navbar-custom header-bar mb-3">
+    {{-- <header class="navbar-custom header-bar mb-3">
             <div class="container-fluid d-flex flex-column flex-md-row align-items-center p-3">
                 <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/">Our App</a></h4>
                 @auth
@@ -68,7 +68,7 @@
                     </form>
                 @endauth
             </div>
-        </header>
+        </header> --}}
     <div id="" class="nav-top">
         <div class="event-banner">
             <div class="event-banner__action">
@@ -189,14 +189,11 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    {{-- <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li> --}}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <img class="navbar-photo" src="{{ asset('images/users/user-male.jpeg') }}"
@@ -246,8 +243,8 @@
                         </ul>
                     </li>
                 </ul>
-            </div> <!-- navbar-collapse.// -->
-        </div> <!-- container-fluid.// -->
+            </div> 
+        </div> 
     </nav>
 
 

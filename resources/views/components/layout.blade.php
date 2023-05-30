@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    {{-- <header class="navbar-custom header-bar mb-3">
+    <header class="navbar-custom header-bar mb-3">
             <div class="container-fluid d-flex flex-column flex-md-row align-items-center p-3">
                 <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/">Our App</a></h4>
                 @auth
@@ -68,7 +68,7 @@
                     </form>
                 @endauth
             </div>
-        </header> --}}
+        </header>
     <div id="" class="nav-top">
         <div class="event-banner">
             <div class="event-banner__action">
